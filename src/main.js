@@ -22,12 +22,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s1 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s1 = 1;
         } else if (s1 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s1 = 0;
         }
@@ -49,12 +49,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s2 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s2 = 1;
         } else if (s2 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s2 = 0;
         }
@@ -76,12 +76,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s3 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s3 = 1;
         } else if (s3 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s3 = 0;
         }
@@ -103,12 +103,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s4 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s4 = 1;
         } else if (s4 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s4 = 0;
         }
@@ -130,12 +130,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s5 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s5 = 1;
         } else if (s5 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s5 = 0;
         }
@@ -157,12 +157,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s6 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s6 = 1;
         } else if (s6 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s6 = 0;
         }
@@ -184,12 +184,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s7 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s7 = 1;
         } else if (s7 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s7 = 0;
         }
@@ -211,12 +211,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s8 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s8 = 1;
         } else if (s8 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s8 = 0;
         }
@@ -238,12 +238,12 @@ youtubePlayer.loadAPI(() => {
         // Poster is clicked
         if (s9 == 0) {
           e.target.style.display = "none";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.playVideo();
           s9 = 1;
         } else if (s9 == 1) {
           e.target.style.display = "block";
-          player.setVolume(20);
+          //player.setVolume(20);
           player.pauseVideo();
           s9 = 0;
         }
