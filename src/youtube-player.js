@@ -141,7 +141,8 @@ class YoutubePlayer {
 				if (typeof params.events.onPosterClick === 'function') {
 					params.events.onPosterClick(e, instancePlayer);
 				} else {
-					instancePlayer.setVolume(10);
+					//instancePlayer.setVolume(10);
+					instancePlayer.mute();
 					instancePlayer.playVideo();
 					e.currentTarget.style.display = 'none';
 				}
