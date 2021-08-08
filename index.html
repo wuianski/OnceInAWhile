@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="i-yeh">
+        <title>once in a while</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="container-player">
+            <div class="player-1" data-youtube-id="5qap5aO4i9A">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-2" data-youtube-id="G6S5CWPCZTg">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-3" data-youtube-id="1nnzdzJQGKQ">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-4" data-youtube-id="FyRNGLTZ7LM">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-5" data-youtube-id="0kv7b2ErWWg">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-6" data-youtube-id="OwREMbIY2kU">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-7" data-youtube-id="Vsw1SU3WKDk">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-8" data-youtube-id="1hOigV1v8wQ">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div class="container-player">
+            <div class="player-9" data-youtube-id="fBjheL512Xk">
+                <div class="player-poster"></div>
+            </div>
+        </div>
+        <div id="titleBlock1">once</div>
+        <div id="titleBlock2">in a</div>
+        <div id="titleBlock3">while</div>
+
+        <script type="module" src="./src/main.js"></script>
+        <script>
+            window.onload = function clickBtn() {
+                var mybtn = document.querySelectorAll(".player-poster");
+                var i = 0;
+
+                var timer = setInterval(function () {
+                    if (i < mybtn.length) {
+                        mybtn[i].click();
+                        console.log("Click handler for button1 " + i + " fired");
+                    } else {
+                        clearInterval(timer);
+                        console.log("finished");
+                        i = 0;
+                        console.log("i=" + i);
+                        reTrigger();
+                        //clickBtn();
+                        console.log("reTrigger");
+                    }
+                    i = i + 1;
+                }, 5000);
+            }
+
+            function reTrigger() {
+                var mybtn2 = document.querySelectorAll(".player-poster");
+                var j = 0;
+
+                var timer2 = setInterval(function () {
+                    if (j < mybtn2.length) {
+                        mybtn2[j].click();
+                        console.log("Trigger video " + j + " fired");
+                    } else {
+                        clearInterval(timer2);
+                        console.log("finished a loop");
+                        j = 0;
+                        reTrigger();
+                        console.log("reTrigger a loop");
+                    }
+                    j = j + 1;
+                }, 5000);
+            }
+        </script>
+
+    </body>
+</html>

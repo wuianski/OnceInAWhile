@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    background-color: #000;
+    padding-left: 3px;
+    overflow: hidden;
+}
+
+.container-player {
+    width:100%;
+    /*max-width: 24.7vw;*/
+    max-width: 33vw;
+    /*max-height: 33vh;*/
+    display: inline-block;
+    /*vertical-align: top;*/
+    /*margin-right: 20px;*/
+    position: relative;
+    font-family: arial, helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 1280px) {
+    .container-player {
+        max-width: 49vw;
+    }
+}
+
+.container-player [data-youtube-id] {
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.container-player .yt-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-player .player-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    z-index: 1;
+}
+/*
+.container-player .player-poster:before {
+    box-sizing: border-box;
+    content: 'Play';
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 18px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+*/
+
+#titleBlock1{
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    position: fixed;
+    top: calc(33% - 0px);
+    left: 33%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 288px;
+}
+#titleBlock2{
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    position: fixed;
+    top: calc(50% - 0px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 288px;
+}
+#titleBlock3{
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    position: fixed;
+    top: calc(66% - 0px);
+    left: 66%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 288px;
+}
