@@ -71,6 +71,8 @@ class YoutubePlayer {
 				'rel': 0,
 				'wmode': 'transparent',
 				'controls': 0,
+				'enablejsapi':1,
+				'origin': 'https://onceinawhile.ml'
 			},
 			selectors: {
 				posterWrapper: '.player-poster'
