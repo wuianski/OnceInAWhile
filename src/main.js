@@ -16,6 +16,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLMaW71wDgN7lB2msttEstwyUjEq6JPXCA", //UberEats 戴資穎
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -43,6 +45,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLdFl_zkI9E8rxUZvZTqq4bMsYKes7ePUh", //麥當勞｜這樣的滋味真好
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -70,6 +74,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLZNP9kA490sfykFqTbvc91AmJamSMmyLU", //PX 全聯經濟美學
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -97,6 +103,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLN91YwxdjsrS5mweg4xshyVRY7g8JzuHt", //LINE Rangers 銀河特攻隊
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -124,6 +132,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLJ2kZ0h7yyR5XShfIwAuDORwCbw5bXWSR", //SK-ll STUDIO
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -151,6 +161,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLGZUaAgtR-bympjY1s8PQhnvCin8uICOr", //Taycan Meets Stars
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -178,6 +190,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLfPYYNRetSN-2z1-DVcdFDMvUg-7R6T9P", //Grammarly - Helping You Connect
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -205,6 +219,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLCDAEE09E07F7E6D5", //金牌啤酒
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
@@ -232,6 +248,8 @@ youtubePlayer.loadAPI(() => {
       controls: 0,
       listType: "playlist",
       list: "PLgIWT6buF2l18bNyhK5hj4n-dX83HUQCu", //CITY CAFE
+      enablejsapi: 1,
+			origin: 'https://onceinawhile.ml',
     },
     events: {
       onPosterClick: (e, player) => {
