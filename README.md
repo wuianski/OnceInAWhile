@@ -1,4 +1,3 @@
-![Create Youtube Player](https://img.shields.io/badge/Create_Youtube_Player-v2.0.4-c51109.svg?style=flat-square)
 
 # Create Youtube Player
 
