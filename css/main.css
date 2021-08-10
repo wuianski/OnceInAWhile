@@ -98,3 +98,15 @@ body{
     z-index: 1;
     font-size: 288px;
 }
+#titleBlock{
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 1;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+}
