@@ -99,8 +99,9 @@ body{
     font-size: 288px;
 }
 #titleBlock{
-    color: rgb(255, 255, 255);
-    mix-blend-mode: difference;
+    color: rgb(10, 10, 10); /*rgb(255, 255, 255)*/
+    background-color: rgb(255,255,255);
+    mix-blend-mode: lighten; /*difference*/
     position: fixed;
     top: 0;
     left: 0;
