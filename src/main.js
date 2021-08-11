@@ -11,13 +11,13 @@ youtubePlayer.loadAPI(() => {
   youtubePlayer.create({
     element: document.querySelector(".player-1"),
     playerVars: {
-      //autoplay: 1,
+      autoplay: 1,
       rel: 0,
       controls: 0,
       listType: "playlist",
       list: "PLMaW71wDgN7lB2msttEstwyUjEq6JPXCA", //UberEats 戴資穎
       enablejsapi: 1,
-			origin: 'https://onceinawhile.ml',
+      origin: "https://onceinawhile.ml",
     },
     events: {
       onPosterClick: (e, player) => {
@@ -40,13 +40,13 @@ youtubePlayer.loadAPI(() => {
   youtubePlayer.create({
     element: document.querySelector(".player-2"),
     playerVars: {
-      //autoplay: 1,
+      autoplay: 1,
       rel: 0,
       controls: 0,
       listType: "playlist",
       list: "PLdFl_zkI9E8rxUZvZTqq4bMsYKes7ePUh", //麥當勞｜這樣的滋味真好
       enablejsapi: 1,
-			origin: 'https://onceinawhile.ml',
+      origin: "https://onceinawhile.ml",
     },
     events: {
       onPosterClick: (e, player) => {
