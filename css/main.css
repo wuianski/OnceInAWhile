@@ -98,12 +98,26 @@ body{
     z-index: 1;
     font-size: 288px;
 }
-#titleBlock{
+#titleBlockA{
     color: rgb(10, 10, 10); /*rgb(255, 255, 255)*/
     background-color: rgb(255,255,255);
     mix-blend-mode: lighten; /*difference*/
     position: fixed;
     top: 0;
+    left: 0;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 1;
+    font-size: 38px;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 100%;
+}
+#titleBlockB{
+    color: rgb(10, 10, 10); /*rgb(255, 255, 255)*/
+    background-color: rgb(255,255,255);
+    mix-blend-mode: lighten; /*difference*/
+    position: fixed;
+    top: 40px;
     left: 0;
     /*transform: translate(-50%, -50%);*/
     z-index: 1;
