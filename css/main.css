@@ -138,6 +138,13 @@ body{
     position: absolute;
     z-index: 99;
 }
+#description{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
 #unmuteButton{
     position: absolute;
     z-index: 99;
@@ -152,7 +159,7 @@ body{
     transition: opacity 0.3s;
     cursor: pointer;
     min-height: 39px;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
