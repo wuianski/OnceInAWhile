@@ -60,97 +60,104 @@ class YoutubePlayer {
 	create(userParams) {
 
 		// Merge default params with user params
-		const params = Object.assign({
-			element: null,
-			width: '100%',
-			height: '100%',
-			playerVars: {
-				'showinfo': 0,
-				'modestbranding': 0,
-				'autohide': 0,
-				'rel': 0,
-				'wmode': 'transparent',
-				'controls': 0,
-				'enablejsapi': 1,
-				'origin': 'https://onceinawhile.ml',
-			},
-			selectors: {
-				posterWrapper: '.player-poster'
-			},
-			events: {}
-		}, userParams || {});
+		const params = Object.assign(
+      {
+        element: null,
+        width: "100%",
+        height: "100%",
+        playerVars: {
+          showinfo: 0,
+          modestbranding: 0,
+          autohide: 0,
+          rel: 0,
+          wmode: "transparent",
+          controls: 0,
+        },
+        selectors: {
+          posterWrapper: ".player-poster",
+        },
+        events: {},
+      },
+      userParams || {}
+    );
 
-		// Generate unique ID for every player
-		const generatedId = new Date().getTime();
-		const selectorId = `youtube-${generatedId}`;
-		params.element['YT_ID'] = selectorId;
-		params.element.insertAdjacentHTML('afterbegin', `<div id="${selectorId}" class="yt-iframe"></div>`);
+    // Generate unique ID for every player
+    const generatedId = new Date().getTime();
+    const selectorId = `youtube-${generatedId}`;
+    params.element["YT_ID"] = selectorId;
+    params.element.insertAdjacentHTML(
+      "afterbegin",
+      `<div id="${selectorId}" class="yt-iframe"></div>`
+    );
 
-		// Init Youtube player
-		this.players.push(new YT.Player(selectorId, {
-			videoId: params.element.getAttribute('data-youtube-id'),
-			width: params.width,
-			height: params.height,
-			playerVars: params.playerVars,
-			events: {
-				'onReady': data => {
+    // Init Youtube player
+    this.players.push(
+      new YT.Player(selectorId, {
+        videoId: params.element.getAttribute("data-youtube-id"),
+        width: params.width,
+        height: params.height,
+        playerVars: params.playerVars,
+        events: {
+          onReady: (data) => {
+            //data.target.mute();
+            data.target.setVolume(0);
+            // Excecute the callback function on ready, if it is available
+            if (typeof params.events.onPlayerReady === "function") {
+              //data.target.unMute();
+              params.events.onPlayerReady(data);
+            }
+          },
+          onStateChange: (state) => {
+            // Store ID of players playing in an array
+            if (state.data === 1) {
+              this.playerOnPlaying.push(selectorId);
+            } else {
+              this.updateArrayPlayersPlaying(selectorId);
+            }
 
-					// Excecute the callback function on ready, if it is available
-					if (typeof params.events.onPlayerReady === 'function') {
-						params.events.onPlayerReady(data);
-					}
+            // Pause others players if the constructor option is enabled
+            if (!this.options.multiplePlaying && state.data === 1) {
+              this.pauseOtherVideo(selectorId);
+            }
 
-				},
-				'onStateChange': state => {
+            // Excecute the callback function on state change, if it is available
+            if (typeof params.events.onStateChange === "function") {
+              params.events.onStateChange(state);
+            } else {
+              //On video ended, show poster video if element exist
+              if (state.data === 0 && playerPoster !== false) {
+                playerPoster.style.display = "block";
+              }
+            }
+          },
+        },
+      })
+    );
 
-					// Store ID of players playing in an array
-					if (state.data === 1) {
-						this.playerOnPlaying.push(selectorId);
-					} else {
-						this.updateArrayPlayersPlaying(selectorId);
-					}
+    // Default behavior on click to the poster (hide poster and play the video)
+    const playerPoster = params.element.querySelector(
+      params.selectors.posterWrapper
+    );
+    if (playerPoster !== null) {
+      playerPoster.addEventListener("click", (e) => {
+        e.preventDefault();
 
-					// Pause others players if the constructor option is enabled
-					if (!this.options.multiplePlaying && state.data === 1) {
-						this.pauseOtherVideo(selectorId);
-					}
+        // Get the Youtube instance
+        const instancePlayer = YT.get(e.currentTarget.parentNode["YT_ID"]);
 
-					// Excecute the callback function on state change, if it is available
-					if (typeof params.events.onStateChange === 'function') {
-						params.events.onStateChange(state);
-					} else {
-						//On video ended, show poster video if element exist
-						if (state.data === 0 && playerPoster !== false) {
-							playerPoster.style.display = 'block';
-						}
-					}
-
-				}
-			}
-		}));
-
-		// Default behavior on click to the poster (hide poster and play the video)
-		const playerPoster = params.element.querySelector(params.selectors.posterWrapper);
-		if (playerPoster !== null) {
-			playerPoster.addEventListener('click', e => {
-
-				e.preventDefault();
-
-				// Get the Youtube instance
-				const instancePlayer = YT.get(e.currentTarget.parentNode['YT_ID'])
-
-				// Excecute the callback function on poster click, if it is available
-				if (typeof params.events.onPosterClick === 'function') {
-					params.events.onPosterClick(e, instancePlayer);
-				} else {
-					//instancePlayer.setVolume(10);
-					instancePlayer.mute();
-					instancePlayer.playVideo();
-					e.currentTarget.style.display = 'none';
-				}
-
-			});
-		}
+        // Excecute the callback function on poster click, if it is available
+        if (typeof params.events.onPosterClick === "function") {
+          params.events.onPosterClick(e, instancePlayer);
+          //instancePlayer.unMute();
+          //instancePlayer.setVolume(0);
+        } else {
+          //instancePlayer.setVolume(0);
+          //instancePlayer.mute();
+          instancePlayer.playVideo();
+          e.currentTarget.style.display = "none";
+        }
+      });
+    }
 
 	}
 
