@@ -17,12 +17,6 @@ body{
     font-family: arial, helvetica, sans-serif;
 }
 
-@media only screen and (max-width: 1280px) {
-    .container-player {
-        max-width: 49vw;
-    }
-}
-
 .container-player [data-youtube-id] {
     position: relative;
     padding-top: 56.25%;
@@ -144,6 +138,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    width: 100%;
 }
 #unmuteButton{
     position: absolute;
@@ -159,7 +154,27 @@ body{
     transition: opacity 0.3s;
     cursor: pointer;
     min-height: 39px;
-    top: 60%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.italic{
+      font-style: italic;
+      font-weight: bold;
+    }
+
+
+@media only screen and (max-width: 1279px) {
+    .container-player {
+        max-width: 49vw;
+    }
+    #description{
+        width: 80%;
+        top: 46%;
+        /*text-align: left;*/
+    }
+    #unmuteButton{
+        top: 66%;
+    }
 }
