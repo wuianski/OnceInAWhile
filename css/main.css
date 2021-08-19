@@ -104,9 +104,9 @@ body{
     font-size: 38px;
     text-align: justify;
     text-justify: inter-word;
-    width: calc( 100vw - 12px );
+    width: calc( 100vw - 10px );
     height: 38px;
-    margin: 6px;
+    margin: 5px;
 }
 #titleBlockB{
     color: rgb(10, 10, 10); /*rgb(255, 255, 255)*/
@@ -120,9 +120,9 @@ body{
     font-size: 18px;
     text-align: justify;
     text-justify: inter-word;
-    width: calc( 100vw - 12px );
+    width: calc( 100vw - 10px );
     height: calc( 100vh - 50px );
-    margin: 6px;
+    margin: 5px;
 }
 #entranceBlock{
     display: block;
