@@ -15,7 +15,8 @@ youtubePlayer.loadAPI(() => {
       rel: 0,
       controls: 0,
       listType: "playlist",
-      list: "PLMaW71wDgN7lB2msttEstwyUjEq6JPXCA", //UberEats 戴資穎
+      // list: "PLMaW71wDgN7lB2msttEstwyUjEq6JPXCA", //UberEats 戴資穎
+      list: "PLMaW71wDgN7mS-NHQIq4VHZgb2_0YvPEk", //UberEats u/ 應該都點得到
       //enablejsapi: 1,
       //origin: "https://onceinawhile.ml",
     },
@@ -191,7 +192,8 @@ youtubePlayer.loadAPI(() => {
       rel: 0,
       controls: 0,
       listType: "playlist",
-      list: "PLfPYYNRetSN-2z1-DVcdFDMvUg-7R6T9P", //Grammarly - Helping You Connect
+      // list: "PLfPYYNRetSN-2z1-DVcdFDMvUg-7R6T9P", //Grammarly - Helping You Connect not exist
+      list: "PLeDkxKm3p62_UelKtYlDSiqXdAp4Rgl82", //IKEA 低價創造無價
       //enablejsapi: 1,
       //origin: 'https://onceinawhile.ml',
     },

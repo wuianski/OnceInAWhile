@@ -93,6 +93,7 @@ body{
     font-size: 288px;
 }
 #titleBlockA{
+    /* display: none; */
     color: rgb(10, 10, 10); /*rgb(255, 255, 255)*/
     background-color: rgb(255,255,255);
     mix-blend-mode: lighten; /*difference*/
@@ -109,6 +110,7 @@ body{
     margin: 5px;
 }
 #titleBlockB{
+    /* display: none; */
     color: rgb(10, 10, 10); /*rgb(255, 255, 255)*/
     background-color: rgb(255,255,255);
     mix-blend-mode: lighten; /*difference, lighten*/
@@ -117,7 +119,7 @@ body{
     left: 0;
     /*transform: translate(-50%, -50%);*/
     z-index: 1;
-    font-size: 18px;
+    font-size: 13px; /*18px*/
     text-align: justify;
     text-justify: inter-word;
     width: calc( 100vw - 10px );

@@ -126,9 +126,14 @@
 
         <script type="module" src="./src/main.js"></script>
         <script>
+            window.addEventListener('load', function () {
+                setTimeout(function(){
+                    document.getElementById("unmuteButton").click();
+                },5000)
+            })
 
-    unmuteButton.addEventListener('click', function () {
-        document.getElementById("entranceBlock").style.display = "none";
+            unmuteButton.addEventListener('click', function () {
+                document.getElementById("entranceBlock").style.display = "none";
                 var mybtn = document.querySelectorAll(".player-poster");
                 var i = 0;
 
@@ -145,7 +150,7 @@
                         //console.log("reTrigger");
                     }
                     i = i + 1;
-                }, 5000);
+                }, 10000);
             });
 
             function reTrigger() {
